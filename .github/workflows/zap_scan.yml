@@ -7,6 +7,9 @@ jobs:
   zap_scan:
     runs-on: ubuntu-latest
     name: DAST baseline scan (ZAP) against local Juice Shop instance
+    permissions:
+      contents: read
+      issues: write
     steps:
       - name: Check out Git repository
         uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 #v6.0.1
